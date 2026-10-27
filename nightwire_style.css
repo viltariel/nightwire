@@ -1,0 +1,190 @@
+body {
+    background-color:black;
+    color:white;
+    font-family: "Manrope", sans-serif;
+    text-align: justify;
+}
+
+*{
+    box-sizing: border-box;
+}
+
+/* Logos */
+
+.nw-logo {
+    display: block; /* margin:auto does not work on img --> convert to block */
+    margin: auto;
+    width: 40%;
+}
+@media (max-width: 500px){
+    .nw-logo {
+       display: block;
+       margin: auto;
+       width: 100%;
+    }
+}
+
+.nw-logo-small {
+    display: block;
+    margin: auto;
+    width: 20%;
+}
+@media (max-width: 500px){
+    .nw-logo-small {
+       display: block;
+       margin: auto;
+       width: 50%;
+    }
+}
+
+.list-logo {
+    display: block;
+    margin: auto;
+    width:50%;
+}
+@media (max-width: 500px){
+    .list-logo {
+        display: block;
+        margin: auto;
+        width: 100%
+    }
+}
+
+
+
+/* Menu */
+
+.nav [href],
+.nav [href]:visited{
+    color:white;
+    text-decoration: none;
+}
+
+nav{
+    text-align: center;
+}
+
+nav a{
+    margin-right: 1%;
+    margin-left: 1%;
+}
+
+
+
+/* Body */
+
+h1,h2{
+    text-align:center;
+    font-weight: normal;
+}
+
+p,ul,details{
+    margin-right: 10%;
+    margin-left: 10%;
+}
+@media (max-width: 500px){
+    p,ul,details{
+        margin:5%;
+    }
+}
+
+[href]{
+    color: lightblue;
+}
+a:visited{
+    color:plum
+}
+
+.centred{
+    text-align: center;
+}
+
+.song-info{
+    text-align: left;
+}
+
+
+/* Contact & streaming logos & links */
+
+.contact img, .streaming img {
+    width: 25px;
+}
+
+.contact {
+    display: grid;
+    grid-template-columns: auto auto;
+    width: fit-content;
+    align-items: center;
+    column-gap: 10px;
+    row-gap: 15px;
+    margin-right: auto;
+    margin-left: auto;
+}
+
+
+.streaming {
+    display: grid;
+    grid-template-columns: auto auto auto auto;
+    width: fit-content;
+    align-items: center;
+    column-gap: 10px;
+    row-gap: 15px;
+    margin-right: auto;
+    margin-left: auto;
+}
+
+
+/* Song list */
+
+.list {
+    display: grid;
+    grid-template-columns: 1fr 1fr; /* fr = fractional unit - controls number and propoprtional width of cols */
+    gap: 2rem; /* spacing bw songs; rem = unit relative to root element's font size*/
+    margin-right: 5%;
+}
+
+.song {
+  display: flex;
+  gap: 1rem; /* spacing bw image and text */
+  margin-left: 5%;
+}
+
+.song img {
+  width: 280px;
+}
+
+
+@media (max-width: 500px) {
+    .list {
+        grid-template-columns: 1fr;
+        margin-right: 0;
+    }
+    .song {
+        display: block;
+    }
+
+  .song img {
+    width: 90%;
+  }
+}
+
+
+
+/* The Archive */
+
+summary {
+    list-style: none;
+    cursor: pointer;
+}
+
+details > summary::-webkit-details-marker { /* necessary to rm arrow in certain browsers */
+  display:none;
+}
+
+.arrow {
+    font-style: normal;
+    margin-left: 0.5rem;
+}
+
+
+/* Archived lists */
